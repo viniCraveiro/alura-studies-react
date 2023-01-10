@@ -1,7 +1,7 @@
 import style from "../List.module.scss";
 
 export default function Item(props: { task: string; time: string }) {
-  let { task, time } = props;
+  const { task, time } = props;
 
   return (
     <li className={style.item}>
