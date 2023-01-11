@@ -1,19 +1,19 @@
-import React, { ReactFragment } from "react";
+import React, { ReactFragment, ReactNode } from 'react';
 
-import style from "./Button.module.scss";
+import style from './Button.module.scss';
 
-type Params = {
+interface Props {
   type?: "button" | "submit" | "reset" | undefined;
-  children?: ReactFragment | undefined;
-};
+  onClick?: () => void;
+  children?: React.ReactNode;
+}
 
-const Button: React.FC<Params> = (props: Params) => {
-  const { type = "button" } = props;
+function Button({ onClick, type, children }: Props) {
   return (
-    <button type={type} className={style.button}>
-      {props.children}
+    <button onClick={onClick} type={type} className={style.button}>
+      {children}
     </button>
   );
-};
+}
 
 export default Button;
