@@ -45,3 +45,7 @@ You can learn more in the [Create React App documentation](https://facebook.gith
 
 To learn React, check out the [React documentation](https://reactjs.org/).
 # alura-studies-react
+
+# Instalar pacote de UUID
+npm i uuid
+npm i --save-dev @types/uuid
